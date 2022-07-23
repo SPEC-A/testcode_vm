@@ -3,10 +3,10 @@ require('dotenv').config({ path: '../.env' });
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
 const compiledACert = require('./build/certificate.json');
-const provider = new HDWalletProvider(
+const provider = new Web3.providers.HttpProvider(
   //'enter metamask pass phrase',
   // remember to change this to your own phrase!
-  'http://192.168.35.33:8545'
+  'http://192.168.35.166:8545'
   // remember to change this to your own endpoint!
 );
 const web3 = new Web3(provider);
